@@ -1,0 +1,29 @@
+#include <iostream>
+#include<cstring>
+using namespace std;
+
+int findLength(char name[])
+{
+  int length=0,i=0;
+  while(name[i]!='\0')
+  {
+    length++;
+    i++;
+  }
+  return length;
+}
+
+int main() {
+  cout << "Hello world!" << endl;
+
+  char name[100];
+  cin.getline(name,20);
+  // cin>>name;
+  cout<<"printing the length : "<<strlen(name)<<endl;
+
+  cout<<"printing the length : "<<findLength(name)<<endl;
+
+
+
+  return 0;
+}
