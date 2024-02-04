@@ -1,0 +1,32 @@
+#include <iostream>
+#include<string.h>
+using namespace  std;
+int main() {
+  char str1[100];
+  char str2[100];
+  cout<<"enter the value of str1: ";
+  cin.getline(str1,20);
+
+  memcpy(str2,str1,strlen(str1)); // copy the value of str1 to str2;
+  
+  int start=0;
+  int end=strlen(str2)-1;
+  while(start<end)
+    {
+      swap(str2[start],str2[end]);
+      start++,end--;
+    }
+
+   cout<<endl;
+  
+  if(strcmp(str1, str2) == 0)
+  {
+     cout<<"This is the palindrome string: ";
+  }
+  else{
+    cout<<"This is not a palindrom number: ";
+  }
+  cout<<endl;
+  cout<<strcmp(str1, str2);
+  return 0;
+}
