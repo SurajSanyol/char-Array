@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main() {
+  char str1[100];
+  cout << "enter the value of str1: ";
+  cin.getline(str1, 20);
+
+  int start = 0;
+  int end = strlen(str1) - 1;
+  while (start <= end) {
+    
+    if (str1[start] != str1[end]) {
+      cout << "not a palindrome string ";
+      break;
+    } else {
+     
+      if(start==end||start+1==end)
+      { cout<<endl;
+        cout<<" this is palindrome string ";
+      }
+
+       start++, end--;
+    }
+  }
+
+  return 0;
+}
