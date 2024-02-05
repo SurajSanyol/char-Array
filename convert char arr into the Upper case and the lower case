@@ -1,0 +1,64 @@
+#include <iostream>
+#include<cstring>
+using namespace std;
+
+void lowerCase(char ch[])
+{
+  int i=0;
+  while(ch[i]!='\0')
+  {
+    if(ch[i]>='a' && ch[i]<='z')
+    {
+      i++;
+   
+    }
+    else if(ch[i]>='A' && ch[i]<='Z')
+    {
+      ch[i]=ch[i]-'A'+'a';
+      i++;
+      
+    }
+    else{
+      i++;
+    }
+  }
+  cout<<"printing in the lower case : "<<ch;
+}
+
+
+void upperCase(char ch[])
+{
+  int i=0;
+  while(ch[i]!='\0')
+  {
+    if(ch[i]>='A' && ch[i]<='Z')
+    {
+      i++;
+   
+    }
+    else if(ch[i]>='a' && ch[i]<='z')
+    {
+      ch[i]=ch[i]-'a'+'A';
+      i++;
+      
+    }
+    else{
+      i++;
+    }
+  }
+  cout<<"printing in the Upper case : "<<ch;
+}
+
+int main() {
+ 
+
+  char ch[100];
+  cin.getline(ch,40);
+ 
+   
+  lowerCase(ch);
+  cout<<endl;
+  upperCase(ch);
+  
+  return 0;
+}
